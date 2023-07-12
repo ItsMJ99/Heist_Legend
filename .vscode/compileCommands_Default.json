@@ -1,0 +1,106 @@
+[
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_Legend.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_Legend.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_Legend.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendCharacter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendProjectile.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Heist_LegendProjectile.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\TP_PickUpComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\TP_PickUpComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\TP_WeaponComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\TP_WeaponComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Default\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	}
+]
