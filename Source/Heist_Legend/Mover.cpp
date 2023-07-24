@@ -2,6 +2,8 @@
 
 #include "Mover.h"
 
+#include "Math/UnrealMathUtility.h"
+
 // Sets default values for this component's properties
 UMover::UMover()
 {
@@ -17,28 +19,38 @@ void UMover::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	OriginalLocation = GetOwner()->GetActorLocation();
 }
 
 // Called every frame
 void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	float t1 = 10;
-	float *t2 = &t1;
-	UE_LOG(LogTemp, Display, TEXT("t1 value = %f"), t1);		   // 10
-	UE_LOG(LogTemp, Display, TEXT("t1 Address = %u"), &t1);		   // t1 add
-	UE_LOG(LogTemp, Display, TEXT("t1 from t2 Address = %u"), t2); // t1 add
-	UE_LOG(LogTemp, Display, TEXT("t2 Address = %u"), &t2);		   // t2 add
-	UE_LOG(LogTemp, Display, TEXT("t1 value = %f"), *t2);		   // t2 val which is from t1 = 10
 
-	AActor *Owner = GetOwner();
-	// FString name = (*Owner).GetActorNameOrLabel();
-	FString Name = Owner->GetActorNameOrLabel();
-	FString Location = Owner->GetActorLocation().ToCompactString();
+	if (ShouldMove)
+	{
+		FVector CurrentLocation = GetOwner()->GetActorLocation();
+		FVector TargetLocation = OriginalLocation + MoveOffset;
+		float Speed = FVector::Distance(OriginalLocation, TargetLocation) / MoveTime;
 
-	UE_LOG(LogTemp, Display, TEXT("Mover Owner Address = %u"), Owner); // Actor add
-	UE_LOG(LogTemp, Display, TEXT("Actor Name = %s"), *Name);
-	UE_LOG(LogTemp, Display, TEXT("Actor Name = %s"), *Location);
-	// ...
+		FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed);
+		GetOwner()->SetActorLocation(NewLocation);
+	}
 }
+
+// float t1 = 10;
+// float *t2 = &t1;
+// UE_LOG(LogTemp, Display, TEXT("t1 value = %f"), t1);		   // 10
+// UE_LOG(LogTemp, Display, TEXT("t1 Address = %u"), &t1);		   // t1 add
+// UE_LOG(LogTemp, Display, TEXT("t1 from t2 Address = %u"), t2); // t1 add
+// UE_LOG(LogTemp, Display, TEXT("t2 Address = %u"), &t2);		   // t2 add
+// UE_LOG(LogTemp, Display, TEXT("t1 value = %f"), *t2);		   // t2 val which is from t1 = 10
+
+// AActor *Owner = GetOwner();
+// // FString name = (*Owner).GetActorNameOrLabel();
+// FString Name = Owner->GetActorNameOrLabel();
+// FString Location = Owner->GetActorLocation().ToCompactString();
+
+// UE_LOG(LogTemp, Display, TEXT("Mover Owner Address = %u"), Owner); // Actor add
+// UE_LOG(LogTemp, Display, TEXT("Actor Name = %s"), *Name);
+// UE_LOG(LogTemp, Display, TEXT("Actor Name = %s"), *Location);

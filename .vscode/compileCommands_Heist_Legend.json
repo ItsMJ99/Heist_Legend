@@ -72,6 +72,22 @@
 		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
 	},
 	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Mover.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Heist_Legend\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\Mover.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
+			"@E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\.vscode\\compileCommands_Heist_Legend\\Heist_Legend.255.rsp"
+		],
+		"directory": "E:\\MJ\\Unreal Engine\\UE_5.1\\Engine\\Source"
+	},
+	{
 		"file": "E:\\MJ\\Unreal Engine\\Projects\\Heist_Legend\\Source\\Heist_Legend\\TP_PickUpComponent.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe",
