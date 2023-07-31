@@ -1,9 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Grabber.h"
-
 #include "Engine/World.h"
-
 #include "DrawDebugHelpers.h"
 
 // Sets default values for this component's properties
@@ -20,47 +18,50 @@ UGrabber::UGrabber()
 void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
 }
 
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	UPhysicsHandleComponent *PhysicsHandle = GetPhysicsHandle();
+	if (PhysicsHandle == nullptr)
+		return;
 
+	FVector TargetLocation = GetComponentLocation() + GetForwardVector() * HoldDistance;
+	PhysicsHandle->SetTargetLocationAndRotation(TargetLocation, GetComponentRotation());
+}
+
+void UGrabber::Grab()
+{
+	UPhysicsHandleComponent *PhysicsHandle = GetPhysicsHandle();
+	if (PhysicsHandle == nullptr)
+		return;
 	FVector Start = GetComponentLocation();
 	FVector End = Start + GetForwardVector() * MaxGrabDistance;
 	DrawDebugLine(GetWorld(), Start, End, FColor::Green);
+	DrawDebugSphere(GetWorld(), End, 10, 10, FColor::Green, false, 5);
 
 	FCollisionShape Sphere = FCollisionShape::MakeSphere(GrabRadius);
 	FHitResult HitResult;
 	bool HasHit = GetWorld()->SweepSingleByChannel(HitResult, Start, End, FQuat::Identity, ECC_GameTraceChannel2, Sphere);
-	if (HasHit == true)
+	if (HasHit)
 	{
-		AActor *HitActor = HitResult.GetActor();
-		UE_LOG(LogTemp, Display, TEXT("Actor Hit Name = %s"), *HitActor->GetActorNameOrLabel());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Display, TEXT("No Actor Hit"));
+		PhysicsHandle->GrabComponentAtLocationWithRotation(HitResult.GetComponent(), NAME_None, HitResult.ImpactPoint, GetComponentRotation());
 	}
 }
 
-// FString Rotation = GetComponentRotation().ToCompactString();
-// UE_LOG(LogTemp, Display, TEXT("Rotation : %s"), *Rotation);
+void UGrabber::Release()
+{
+	UE_LOG(LogTemp, Display, TEXT("Released Grabber"));
+}
 
-// float TimeSec = GetWorld()->TimeSeconds;
-// UE_LOG(LogTemp, Display, TEXT("Time Seconds : % f"), TimeSec);
-
-// void UGrabber::PrintDamage(const float &Damage)
-// {
-// 	// Damage = 20;
-// 	UE_LOG(LogTemp, Display, TEXT("Damage : %f"), Damage);
-// }
-
-// bool UGrabber::HasDamage(float &OutDamage)
-// {
-// 	OutDamage = 50;
-// 	return true;
-// }
+UPhysicsHandleComponent *UGrabber::GetPhysicsHandle() const
+{
+	UPhysicsHandleComponent *Result = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	if (Result == nullptr)
+	{
+		UE_LOG(LogTemp, Display, TEXT("Grabber requires a UPhysicsHandleComponent"));
+	}
+	return Result;
+}
